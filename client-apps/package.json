@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "echo $AMPLIFY_DIFF_DEPLOY >> .env && echo $AMPLIFY_MONOREPO_APP_ROOT >> .env && echo $AUTH_SECRET >> .env && echo $AUTH_URL >> .env && echo $NEXT_PUBLIC_API_GATEWAY_URL >> .env && echo $NEXT_PUBLIC_COGNITO_CLIENT_ID >> .env && next build",
     "start": "next start",
     "lint": "next lint"
   },
